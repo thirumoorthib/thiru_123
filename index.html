@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thirumoorthi Balakrishnan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-gray-900 text-white fixed top-0 left-0 w-full z-50 shadow-md">
+    <nav class="container mx-auto flex justify-end items-center py-4">
+      <ul class="flex space-x-6">
+        <li>
+          <a href="#home" class="px-4 py-2 bg-gray-700 rounded-lg shadow-md hover:bg-gray-600 hover:shadow-lg transition">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="px-4 py-2 bg-gray-700 rounded-lg shadow-md hover:bg-gray-600 hover:shadow-lg transition">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#skills" class="px-4 py-2 bg-gray-700 rounded-lg shadow-md hover:bg-gray-600 hover:shadow-lg transition">
+            Skills
+          </a>
+        </li>
+        <li>
+          <a href="#projects" class="px-4 py-2 bg-gray-700 rounded-lg shadow-md hover:bg-gray-600 hover:shadow-lg transition">
+            Projects
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="px-4 py-2 bg-gray-700 rounded-lg shadow-md hover:bg-gray-600 hover:shadow-lg transition">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="bg-gray-900 text-white min-h-screen flex items-center">
+    <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-center">
+      <!-- Left Content -->
+      <div class="md:w-1/2 text-center md:text-left">
+        <h2 class="text-4xl font-bold mb-4 text-white">Hi, I'm a Frontend Engineer</h2>
+        <p class="text-lg mb-6 text-gray-300">
+          I specialize in building responsive and user-friendly web applications that deliver exceptional user
+          experiences.
+        </p>
+        <div class="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 justify-center md:justify-start">
+          <a href="assets/resume.pdf" download
+            class="bg-purple-600 text-white px-6 py-2 rounded shadow hover:bg-purple-700 transition">
+            Download CV
+          </a>
+          <a href="https://www.linkedin.com/in/thirumoorthi-balakrishnan-35b056166/" target="_blank"
+            class="bg-blue-600 text-white px-6 py-2 rounded shadow hover:bg-blue-700 transition">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+  
+      <!-- Right Content -->
+      <div class="md:w-1/2 flex justify-center mb-8 md:mb-0">
+        <div class="relative">
+          <div class="w-64 h-64 md:w-72 md:h-72 rounded-full bg-gray-800 flex items-center justify-center shadow-lg">
+            <img src="assets/images/profile.jpg" alt="Profile"
+              class="rounded-full w-56 h-56 md:w-64 md:h-64 object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-gray-900 text-white min-h-screen flex items-center">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-center">
+      <!-- Left Content -->
+      <div class="md:w-1/2 text-center md:text-left px-6">
+        <h2 class="text-4xl font-bold mb-6 text-white">About Me</h2>
+        <p class="text-lg mb-6 text-gray-300">
+          I am a passionate Frontend Engineer with experience in building modern, responsive, and accessible web applications. Below is a summary of my professional experience:
+        </p>
+      </div>
+  
+      <!-- Right Content -->
+      <div class="md:w-1/2 flex justify-center">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <canvas id="experienceChart" class="mx-auto" width="400" height="200"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="relative bg-gray-900 text-white min-h-screen flex items-center">
+    <!-- Stripes Background -->
+    <div class="absolute inset-0 bg-gray-800 opacity-50" style="background-size: 50px 50px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);"></div>
+  
+    <div class="container mx-auto text-center relative z-10">
+      <h2 class="text-4xl font-bold mb-8 text-white">Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold text-white">HTML, CSS, and JavaScript</h3>
+          <p class="text-gray-400">The foundation of frontend development.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold text-white">Frontend Frameworks</h3>
+          <p class="text-gray-400">React, Vue.js, Angular for efficient UI building.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold text-white">Responsive Design</h3>
+          <p class="text-gray-400">Ensuring websites work across all devices.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold text-white">Version Control</h3>
+          <p class="text-gray-400">Git and GitHub for managing code changes.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold text-white">CSS Preprocessors</h3>
+          <p class="text-gray-400">SASS, LESS for better styling workflows.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold text-white">Testing & Debugging</h3>
+          <p class="text-gray-400">Using tools like Jest, Cypress, and browser dev tools.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold text-white">Web Performance Optimization</h3>
+          <p class="text-gray-400">Enhancing speed and efficiency.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold text-white">DOM Manipulation</h3>
+          <p class="text-gray-400">Understanding how to dynamically update UI elements.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold text-white">RESTful APIs</h3>
+          <p class="text-gray-400">Fetching and handling data from backend services.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold text-white">Command Line Proficiency</h3>
+          <p class="text-gray-400">Navigating and executing tasks efficiently.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="bg-gray-900 text-white min-h-screen flex items-center">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8 text-white">My Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+          <h3 class="text-xl font-bold mb-4 text-white">CAFE SHOP</h3>
+          <p class="text-gray-400 mb-4">A brief description of the project goes here, highlighting its purpose and features.</p>
+          <a href="https://uiworks.vercel.app" target="_blank" class="text-blue-400 hover:underline font-semibold">https://uiworks.vercel.app</a>
+        </div>
+  
+        <!-- Project 2 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+          <h3 class="text-xl font-bold mb-4 text-white">Project 2</h3>
+          <p class="text-gray-400 mb-4">A brief description of the project goes here, highlighting its purpose and features.</p>
+          <a href="#" class="text-blue-400 hover:underline font-semibold">View Project</a>
+        </div>
+  
+        <!-- Project 3 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+          <h3 class="text-xl font-bold mb-4 text-white">Project 3</h3>
+          <p class="text-gray-400 mb-4">A brief description of the project goes here, highlighting its purpose and features.</p>
+          <a href="#" class="text-blue-400 hover:underline font-semibold">View Project</a>
+        </div>
+  
+        <!-- Project 4 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+          <h3 class="text-xl font-bold mb-4 text-white">Project 4</h3>
+          <p class="text-gray-400 mb-4">A brief description of the project goes here, highlighting its purpose and features.</p>
+          <a href="#" class="text-blue-400 hover:underline font-semibold">View Project</a>
+        </div>
+  
+        <!-- Project 5 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+          <h3 class="text-xl font-bold mb-4 text-white">Project 5</h3>
+          <p class="text-gray-400 mb-4">A brief description of the project goes here, highlighting its purpose and features.</p>
+          <a href="#" class="text-blue-400 hover:underline font-semibold">View Project</a>
+        </div>
+  
+        <!-- Project 6 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+          <h3 class="text-xl font-bold mb-4 text-white">Project 6</h3>
+          <p class="text-gray-400 mb-4">A brief description of the project goes here, highlighting its purpose and features.</p>
+          <a href="#" class="text-blue-400 hover:underline font-semibold">View Project</a>
+        </div>
+  
+        <!-- Project 7 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+          <h3 class="text-xl font-bold mb-4 text-white">Project 7</h3>
+          <p class="text-gray-400 mb-4">A brief description of the project goes here, highlighting its purpose and features.</p>
+          <a href="#" class="text-blue-400 hover:underline font-semibold">View Project</a>
+        </div>
+  
+        <!-- Project 8 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+          <h3 class="text-xl font-bold mb-4 text-white">Project 8</h3>
+          <p class="text-gray-400 mb-4">A brief description of the project goes here, highlighting its purpose and features.</p>
+          <a href="#" class="text-blue-400 hover:underline font-semibold">View Project</a>
+        </div>
+  
+        <!-- Project 9 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+          <h3 class="text-xl font-bold mb-4 text-white">Project 9</h3>
+          <p class="text-gray-400 mb-4">A brief description of the project goes here, highlighting its purpose and features.</p>
+          <a href="#" class="text-blue-400 hover:underline font-semibold">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="contact" class="bg-gray-900 text-white min-h-screen flex items-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-12 text-center text-white">Get in Touch</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Contact Form -->
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+          <form id="contactForm" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-bold mb-2 text-gray-300">Your Name</label>
+              <input type="text" id="name" placeholder="Enter your name" class="w-full p-3 rounded border border-gray-600 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-bold mb-2 text-gray-300">Your Email</label>
+              <input type="email" id="email" placeholder="Enter your email" class="w-full p-3 rounded border border-gray-600 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-bold mb-2 text-gray-300">Your Message</label>
+              <textarea id="message" placeholder="Write your message here" class="w-full p-3 rounded border border-gray-600 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded shadow hover:bg-blue-600 transition">
+              Send Message
+            </button>
+          </form>
+        </div>
+  
+        <!-- Contact Information -->
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-bold mb-6 text-white">Contact Information</h3>
+          <ul class="text-gray-400 space-y-4">
+            <li><strong>Email:</strong> <a href="mailto:frontend@example.com" class="text-blue-400 hover:underline">thirumoorthibalakrishnan1994@gmail.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+1234567890" class="text-blue-400 hover:underline">9047 829 763</a></li>
+            <li><strong>Address:</strong> chennai</li>
+          </ul>
+          <p class="mt-6 text-gray-400">Feel free to reach out via email or phone, or drop a message using the form.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4 text-center">
+    <p>&copy; 2025 Thirumoorthi Balakrishnan. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
