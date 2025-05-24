@@ -1,5 +1,20 @@
 // Experience Chart
 
+
+  // Mobile nav toggle
+  document.addEventListener('DOMContentLoaded', function () {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', function () {
+      navMenu.classList.toggle('hidden');
+    });
+    // Optional: Hide menu on link click (mobile)
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) navMenu.classList.add('hidden');
+      });
+    });
+  });
 // Interactive & Visual Appeal: Experience Chart
 document.addEventListener('DOMContentLoaded', function () {
   const ctx = document.getElementById('experienceChart').getContext('2d');
@@ -56,28 +71,5 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
   alert(`Message sent successfully!\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
 });
 
- // Responsive nav toggle
-  const navToggle = document.getElementById('nav-toggle');
-  const navMenu = document.getElementById('nav-menu');
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('hidden');
-  });
 
-  // Optional: Close menu on link click (mobile)
-  document.querySelectorAll('#nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth < 768) navMenu.classList.add('hidden');
-    });
-  });
-
-
-// Hide header on mobile when loaded
-document.addEventListener('DOMContentLoaded', function () {
-  if (window.innerWidth < 768) {
-    document.getElementById('main-header').style.transform = 'translateY(-100%)';
-    setTimeout(() => {
-      document.getElementById('main-header').style.transform = 'translateY(0)';
-    }, 800); // Slide in after 0.8s
-  }
-});
  
